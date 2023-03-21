@@ -70,8 +70,9 @@ function win() {
 function move() {
   let sticks = parseInt(document.getElementById("count_left").innerHTML.match(/\d+/));
   sticks -= (Math.floor(Math.random() * 4) + 1);
-  console.log(sticks);
   if (sticks <= 0) { win() }
-  document.getElementById("count_left").innerHTML = "Палочек осталось: " + sticks; 
-  if (sticks == 1) { lose() }
+  else {
+    document.getElementById("count_left").innerHTML = "Палочек осталось: " + sticks; 
+    if (sticks == 1) { lose() }
+  }
 }
