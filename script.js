@@ -11,7 +11,7 @@ function new_game() {
 
 function take_1() {
   let sticks = parseInt(document.getElementById("count_left").innerHTML.match(/\d+/));
-  if (sticks == 1) { lose() }
+  if (sticks == 1) { lose() break; }
   sticks -= 1;
   document.getElementById("count_left").innerHTML = "Палочек осталось: " + sticks;
   if (sticks == 1) { win() }
@@ -20,7 +20,7 @@ function take_1() {
 
 function take_2() {
   let sticks = parseInt(document.getElementById("count_left").innerHTML.match(/\d+/));
-  if (sticks <= 2) { lose() }
+  if (sticks <= 2) { lose() break; }
   sticks -= 2;
   document.getElementById("count_left").innerHTML = "Палочек осталось: " + sticks; 
   if (sticks == 1) { win() }
@@ -29,7 +29,7 @@ function take_2() {
 
 function take_3() {
   let sticks = parseInt(document.getElementById("count_left").innerHTML.match(/\d+/));
-  if (sticks <= 3) { lose() }
+  if (sticks <= 3) { lose() break; }
   sticks -= 3;
   document.getElementById("count_left").innerHTML = "Палочек осталось: " + sticks;  
   if (sticks == 1) { win() }
@@ -38,7 +38,7 @@ function take_3() {
 
 function take_4() {
   let sticks = parseInt(document.getElementById("count_left").innerHTML.match(/\d+/));
-  if (sticks <= 4) { lose() }
+  if (sticks <= 4) { lose() break; }
   sticks -= 4;
   document.getElementById("count_left").innerHTML = "Палочек осталось: " + sticks;  
   if (sticks == 1) { win() }
